@@ -2,8 +2,11 @@ const {Character} = require('./character');
 
 
 class Enemy extends Character {
-  constructor(name, description, currentRoom) {
+  constructor(name, description, currentRoom,strength, health) {
     // Fill this in
+      super(name,description,currentRoom);
+      this.strength=strength;
+      this.health=health;
   }
 
   setPlayer(player) {
@@ -41,6 +44,7 @@ class Enemy extends Character {
 
   applyDamage(amount) {
     // Fill this in
+     return this.health-amount;
   }
 
 
